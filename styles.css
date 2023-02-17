@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.13rem;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: hsl(216, 50%, 16%);
+    margin: 4rem 1.5rem 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.container .main-img img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.container .main-img {
+    position: relative;
+}
+
+.container .main-img div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 1%);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .main-img div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.container .main-img div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* this trasform property takes the eye icon to the center */
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    margin: 1rem 0 0.8rem
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container p {
+    color: hsl(215, 51%, 70%);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.container ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul li:first-child {
+    color:  hsl(178, 100%, 50%)
+}
+
+.container ul li:last-child {
+    color: hsl(215, 51%, 70%)
+}
+
+.container ul li img {
+    margin-right: 0.5rem;
+}
+
+.container .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 1rem;
+}
+
+.container .avatar img {
+    width: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: auto 1rem
+}
+
+.container .avatar p {
+    margin-top: 1rem;
+}
+
+.container .avatar p span {
+    color: hsl(0, 0%, 100%)
+}
+
+.container .avatar p span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.attribution { 
+    font-size: 0.8rem; 
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+.attribution a { 
+    color: hsl(178, 100%, 50%);
+ }
+
+ @media (min-width: 30rem) {
+    .container {
+        width: 25rem;
+    }
+ }
